@@ -1,0 +1,15 @@
+<div>
+    <h3>Hello World Component!</h3>
+    <p>Below is the data received from API:</p>
+    <p *ngIf="data">{{ data }}</p>
+    <ng-container *ngIf="error; else loading">
+        <div class="text-danger">
+            {{ error.message }}
+        </div>
+    </ng-container>
+    <ng-template #loading>
+        <div class="text-warning" *ngIf="!data">
+            Loading ...
+        </div>
+    </ng-template>
+</div>
