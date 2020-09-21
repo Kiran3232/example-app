@@ -11,7 +11,7 @@ export class HttpService {
   ) { }
 
   getHelloWorld() {
-    return this.http.get('assets/hello.json');
+    return this.http.get('http://dashboardsdemo.azurewebsites.net/api/Hello/StringHello');
   }
 
 }
